@@ -22,15 +22,15 @@
 - PASCAL-5<sup>i</sup>:  [VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) + [SBD](http://home.bharathh.info/pubs/codes/SBD/download.html)
 
 - COCO-20<sup>i</sup>:  [COCO2014](https://cocodataset.org/#download)
-- Put the datasets into the `data` directory.
+- Put the datasets into the `data/` directory.
 - Run `util/get_mulway_base_data.py` to generate base annotations and put them into the `data/base_annotation/` directory. (Only used when the coarse segmentation prompt generator is BAM.)
 
 ### Models
 
-- Download the pre-trained [VGG16](https://download.pytorch.org/models/vgg16_bn-6c64b313.pth) and [ResNet50](https://download.pytorch.org/models/resnet50-19c8e357.pth) encoders and put them into the `initmodel` directory. 
-- Download the pre-trained [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) encoder and put it into the `initmodel/SAM_encoder` directory.
-- Download the pre-trained [BAM](https://github.com/chunbolang/BAM) models and put them into the `initmodel/BAM_models` directory. (Only used when the coarse segmentation prompt generator is BAM.)
-- Download the pre-trained base learners from [BAM](https://github.com/chunbolang/BAM) and put them under `initmodel/PSPNet`. (Only used when the coarse segmentation prompt generator is BAM.)
+- Download the pre-trained [VGG16](https://download.pytorch.org/models/vgg16_bn-6c64b313.pth) and [ResNet50](https://download.pytorch.org/models/resnet50-19c8e357.pth) encoders and put them into the `initmodel/` directory. 
+- Download the pre-trained [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth) encoder and put it into the `initmodel/SAM_encoder/` directory.
+- Download the pre-trained [BAM](https://github.com/chunbolang/BAM) models and put them into the `initmodel/BAM_models/` directory. (Only used when the coarse segmentation prompt generator is BAM.)
+- Download the pre-trained base learners from [BAM](https://github.com/chunbolang/BAM) and put them under `initmodel/PSPNet/`. (Only used when the coarse segmentation prompt generator is BAM.)
 
 
 ### Scripts
