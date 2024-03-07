@@ -109,10 +109,10 @@ class OneModel(nn.Module):
         # for bin in range(((self.depth+1) // 2) - 1):
         for bin in range(self.depth - 1):
             self.inner_cls.append(nn.Sequential(
-                nn.Conv2d(reduce_dim, reduce_dim, kernel_size=3, padding=1, bias=False),
+                nn.Conv2d(reduce_dim, 8, kernel_size=3, padding=1, bias=False),
                 nn.ReLU(inplace=True),
                 nn.Dropout2d(p=0.1),
-                nn.Conv2d(reduce_dim, classes, kernel_size=1)
+                nn.Conv2d(8, classes, kernel_size=1)
             ))
             self.beta_conv.append(nn.Sequential(
                 nn.Conv2d(reduce_dim + 3, reduce_dim, kernel_size=1, bias=False),
