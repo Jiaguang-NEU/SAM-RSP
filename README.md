@@ -62,7 +62,7 @@ Performance comparison with the state-of-the-art approachs in terms of **average
    
    
 
-
+This paper is currently being reviewed by the Image and Vision Computing journal.
 
 
 ## References
