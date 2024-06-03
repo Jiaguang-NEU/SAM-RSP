@@ -193,10 +193,11 @@ class OneModel(nn.Module):
         merge_feat = self.init_merge(merge_feat)
         merge_feat = merge_feat.permute(0, 2, 3, 1)
         for bin, blk in zip(range(self.depth), self.blocks):
-            merge_feat = blk(merge_feat)
+            tmp_merge_feat = copy.deepcopy(merge_feat)
+            merge_feat = blk(tmp_merge_feat)
             if bin < (self.depth - 1):
-                merge_feat = merge_feat.permute(0, 3, 1, 2)
-                inner_out_bin = self.inner_cls[bin](merge_feat)
+                tmp_merge_feat = tmp_merge_feat.permute(0, 3, 1, 2)
+                inner_out_bin = self.inner_cls[bin](tmp_merge_feat)
                 inner_out_diff_mask = create_diff_mask(inner_out_bin)
                 out_list.append(inner_out_bin)
                 merge_feat = torch.cat([merge_feat, inner_out_bin, inner_out_diff_mask], 1)
