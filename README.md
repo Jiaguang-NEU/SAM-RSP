@@ -70,4 +70,4 @@ Performance comparison with the state-of-the-art approachs in terms of **average
 This repo is mainly built based on [SAM](https://segment-anything.com), and [BAM](https://github.com/chunbolang/BAM). Thanks for their great work!
 
 ````
-This paper is currently being reviewed by the Image and Vision Computing journal.
+This paper has been accepted by the Image and Vision Computing journal.
